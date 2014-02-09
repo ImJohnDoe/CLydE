@@ -1,13 +1,13 @@
 simply.body("", true);
 
 
-simply.title('       CLydE');
+simply.title('        CLydE');
 
 var time = new Date();
 var hour = time.getHours(); 
 var minute = time.getMinutes();
 
-simply.text(hour);
+simply.subtitle(hour);
 //simply.text(hour + ":" + minute);
 /*
 
