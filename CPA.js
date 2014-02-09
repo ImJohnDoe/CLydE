@@ -7,7 +7,7 @@ var time = new Date();
 var hour = time.getHours(); 
 var minute = time.getMinutes();
 
-simply.home(hour + ":" + minute);
+simply.body(hour + ":" + minute);
 
 
 simply.on('singleClick', function(e) {
