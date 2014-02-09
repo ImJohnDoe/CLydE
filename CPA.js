@@ -27,6 +27,15 @@ var updateTime = function() {
     }
 };
 
+var checkAction = function() {
+    if (Math.abs(minute - time.getMinutes()) < 5) {
+      updateTime();
+    } else {
+      simply.subtitle(" it's time to go!");
+    }
+};
+
+
 updateTime();
 
 simply.on('singleClick', function(e) {
@@ -41,7 +50,7 @@ simply.on('singleClick', function(e) {
     } else {
       minute += 1;
     }
-    updateTime();
+    checkAction();
   } else if (e.button === 'down') {
     if (minute === 0) {
       minute = 59;
@@ -53,7 +62,7 @@ simply.on('singleClick', function(e) {
       } else {
         minute -= 1;
       }
-    updateTime();
+    checkAction();
   }
 });
 
