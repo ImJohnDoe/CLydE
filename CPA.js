@@ -7,9 +7,8 @@ var time = new Date();
 var hour = time.getHours(); 
 var minute = time.getMinutes();
 
-simply.subtitle(hour);
-//simply.text(hour + ":" + minute);
-/*
+simply.home(hour + ":" + minute);
+
 
 simply.on('singleClick', function(e) {
   if (e.button === 'up') {
@@ -21,4 +20,4 @@ simply.on('singleClick', function(e) {
   }
 });
 
-*/
+
