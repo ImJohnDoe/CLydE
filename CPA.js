@@ -1,6 +1,5 @@
 simply.body("", true);
 
-
 simply.title('        CLydE');
 
 var time = new Date();
@@ -12,12 +11,25 @@ if(time.getHours() > 12){
 }
 var minute = time.getMinutes();
 
-if (hour < 10) {
-  simply.subtitle("                                 0" + hour + ":" + minute);
-} else {
-  simple.subtitle("                                  " + hour + ":" + minute);
-}
+var updateTime = function() {
+  if (hour < 10) {  
+      simply.subtitle("                                  0" + hour + ":");
+      if (minute > 9) {
+        simply.subtitle(minute);
+      } else {
+        simply.subtitle("0" + minute);
+      }
+    } else {
+      simple.subtitle("                                    " + hour + ":");
+      if (minute > 9) {
+        simply.subtitle(minute);
+      } else {
+        simply.subtitle("0" + minute);
+      }
+    }
+};
 
+updateTime();
 
 simply.on('singleClick', function(e) {
   if (e.button === 'up') {
@@ -31,11 +43,7 @@ simply.on('singleClick', function(e) {
     } else {
       minute += 1;
     }
-    if (hour < 10) {
-      simply.subtitle("                                 0" + hour + ":" + minute);
-    } else {
-      simple.subtitle("                                  " + hour + ":" + minute);
-    }
+    updateTime();
   } else if (e.button === 'down') {
     if (minute === 0) {
       minute = 59;
@@ -47,12 +55,6 @@ simply.on('singleClick', function(e) {
       } else {
         minute -= 1;
       }
-    if (hour < 10) {  
-      simply.subtitle("                                 0" + hour + ":" + minute);
-    } else {
-      simple.subtitle("                                  " + hour + ":" + minute);
-    }
+    updateTime();
   }
 });
-
-
