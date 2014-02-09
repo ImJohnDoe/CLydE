@@ -30,9 +30,6 @@ var updateTime = function() {
 updateTime();
 
 simply.on('singleClick', function(e) {
-  
-});
-
   if (e.button === 'up') {
     if(minute === 59) {
       minute = 0;
@@ -58,3 +55,5 @@ simply.on('singleClick', function(e) {
       }
     updateTime();
   }
+});
+
