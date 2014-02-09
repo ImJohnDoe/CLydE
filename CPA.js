@@ -13,18 +13,16 @@ var minute = time.getMinutes();
 
 var updateTime = function() {
   if (hour < 10) {  
-      simply.subtitle("                                  0" + hour + ":");
       if (minute > 9) {
-        simply.subtitle(minute);
+      simply.subtitle("                                  0" + hour + ":" + minute);
       } else {
-        simply.subtitle("0" + minute);
+      simply.subtitle("                                  0" + hour + ":0" + minute);
       }
     } else {
-      simple.subtitle("                                    " + hour + ":");
       if (minute > 9) {
-        simply.subtitle(minute);
+      simple.subtitle("                                    " + hour + ":" + minute);
       } else {
-        simply.subtitle("0" + minute);
+      simple.subtitle("                                    " + hour + ":0" + minute);
       }
     }
 };
