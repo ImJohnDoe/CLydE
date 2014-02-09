@@ -4,10 +4,15 @@ simply.body("", true);
 simply.title('        CLydE');
 
 var time = new Date();
-var hour = time.getHours(); 
+var hour;
+if(time.getHours() > 12){
+  hour = time.getHours();
+} else {
+  hour = time.getHours();
+}
 var minute = time.getMinutes();
 
-simply.body(hour + ":" + minute);
+simply.subtitle(                                hour + ":" + minute);
 
 
 simply.on('singleClick', function(e) {
