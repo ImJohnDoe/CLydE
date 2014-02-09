@@ -1,7 +1,8 @@
+
+var clicks = 5; // Amount of click until "time to go!"
+
 simply.body("", true);
-
 simply.title('        CLydE');
-
 var time = new Date();
 var hour;
 if(time.getHours() > 12){
@@ -28,7 +29,7 @@ var updateTime = function() {
 };
 
 var checkAction = function() {
-    if (Math.abs(minute - time.getMinutes()) < 5) {
+    if (Math.abs(minute - time.getMinutes()) < clicks) {
       updateTime();
     } else {
       simply.subtitle(" it's time to go!");
