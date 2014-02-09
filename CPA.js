@@ -1,4 +1,4 @@
-body("", true);
+simply.body("", true);
 
 
 simply.title('CLydE');
