@@ -18,10 +18,10 @@ simply.subtitle("                                    " + hour + ":" + minute);
 simply.on('singleClick', function(e) {
   if (e.button === 'up') {
     minute += 1;
-    simply.body(hour + ":" + minute);
+    simply.subtitle("                                    " + hour + ":" + minute);
   } else if (e.button === 'down') {
     minute -= 1;
-    simply.body(hour + ":" + minute);
+    simply.subtitle("                                    " + hour + ":" + minute);
   }
 });
 
