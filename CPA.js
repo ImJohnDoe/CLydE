@@ -12,7 +12,7 @@ if(time.getHours() > 12){
 }
 var minute = time.getMinutes();
 
-simply.subtitle("                                                  " + hour + ":" + minute);
+simply.subtitle("                                        " + hour + ":" + minute);
 
 
 simply.on('singleClick', function(e) {
