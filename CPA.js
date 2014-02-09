@@ -1,9 +1,8 @@
+var clicks = 5;  // Amount of click until "time to go!"
 
-var clicks = 5; // Amount of click until "time to go!"
-
-simply.body("", true);
-simply.title('        CLydE');
-var time = new Date();
+simply.body("", true);  // Clears initial screen
+simply.title('        CLydE');  // Initialize "CLydE" title
+var time = new Date();  // Fetch current time
 var hour;
 if(time.getHours() > 12){
   hour = time.getHours() - 12;
@@ -26,7 +25,7 @@ var updateTime = function() {
       simple.subtitle("                                     " + hour + ":0" + minute);
       }
     }
-};
+};  // updates time maintaining format
 
 var checkAction = function() {
     if (Math.abs(minute - time.getMinutes()) < clicks) {
@@ -34,10 +33,10 @@ var checkAction = function() {
     } else {
       simply.subtitle(" it's time to go!");
     }
-};
+};  // Determins whether to update time or announce "Time to go!" 
 
 
-updateTime();
+updateTime();  // Initialize time
 
 simply.on('singleClick', function(e) {
   if (e.button === 'up') {
@@ -65,5 +64,6 @@ simply.on('singleClick', function(e) {
       }
     checkAction();
   }
-});
+});  // Handler for up and down clicks
 
+//  EOF
