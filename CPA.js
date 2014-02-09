@@ -4,8 +4,8 @@ simply.body("", true);
 simply.title('CLydE');
 
 var time = new Date();
-var hour = d.getHours(); 
-var minute = d.getMinutes();
+var hour = time.getHours(); 
+var minute = time.getMinutes();
 
 simply.text(hour + ":" + minute);
 
