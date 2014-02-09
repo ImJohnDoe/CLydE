@@ -14,15 +14,15 @@ var minute = time.getMinutes();
 var updateTime = function() {
   if (hour < 10) {  
       if (minute > 9) {
-      simply.subtitle("                                  0" + hour + ":" + minute);
+      simply.subtitle("                                   0" + hour + ":" + minute);
       } else {
-      simply.subtitle("                                  0" + hour + ":0" + minute);
+      simply.subtitle("                                   0" + hour + ":0" + minute);
       }
     } else {
       if (minute > 9) {
-      simple.subtitle("                                    " + hour + ":" + minute);
+      simple.subtitle("                                     " + hour + ":" + minute);
       } else {
-      simple.subtitle("                                    " + hour + ":0" + minute);
+      simple.subtitle("                                     " + hour + ":0" + minute);
       }
     }
 };
@@ -30,6 +30,9 @@ var updateTime = function() {
 updateTime();
 
 simply.on('singleClick', function(e) {
+  
+});
+
   if (e.button === 'up') {
     if(minute === 59) {
       minute = 0;
@@ -55,4 +58,3 @@ simply.on('singleClick', function(e) {
       }
     updateTime();
   }
-});
