@@ -6,13 +6,13 @@ simply.title('        CLydE');
 var time = new Date();
 var hour;
 if(time.getHours() > 12){
-  hour = time.getHours();
+  hour = time.getHours() - 12;
 } else {
   hour = time.getHours();
 }
 var minute = time.getMinutes();
 
-simply.subtitle(                                hour + ":" + minute);
+simply.subtitle(\n \n hour + ":" + minute);
 
 
 simply.on('singleClick', function(e) {
